@@ -21,13 +21,8 @@ list_set = set(sites)
 # convert the set to the list
 sites = (list(list_set))
 
-print(sites)
-
-
 successful_launches_df = successful_launches_df.groupby(['Launch Site'])['Launch Site'].count()
-
 successful_launches_df = pd.DataFrame({'Launch Site':successful_launches_df.index, 'Successes':successful_launches_df.values})
-
 
 # Create a dash application
 app = dash.Dash(__name__)
